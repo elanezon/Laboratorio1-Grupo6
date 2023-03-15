@@ -1,45 +1,40 @@
+.global fir_asm
+
 fir_asm:
-addi a0, zero, -5
-addi a1, zero, -3
-addi a2, zero, 2
-addi a3, zero, 4
-addi a4, zero, 3
+	addi s8, zero, -2
+	addi s1, zero, 3          #b2
 
-#addi x6, zero, 1         #b0 y b4
-addi s0, zero, -2         #b1 y b3
-addi s1, zero, 3          #b2
+	addi s2, zero, 0         #FINAL
+	addi s3, zero, 2
 
-addi s2, zero, 0         #FINAL
-addi s3, zero, 2
 
 UNO:
     add s2, s2, a0
 
 DOS:
-    add t0, zero, s0
+    add t0, zero, s8
     add t1, zero, a1
     addi s4, zero, 3
-    j MULT
+    jal zero, MULT
 
 TRES:
     add t0, zero, s1
     add t1, zero, a2
     addi s5, zero, 4
-    j MULT
+    jal zero, MULT
 
 CUATRO:
-    add t0, zero, s0
+    add t0, zero, s8
     add t1, zero, a3
     addi s6, zero, 5
-    j MULT
+    jal zero, MULT
 
 CINCO:       
     add s2, s2, a4
 
 SALIDA:
-    #mv a0, s2
-    #jr ra
-    j SALIDA
+    mv a0, s2
+    jalr zero, ra, 0
 
 READY:
     add s2, s2, t5
@@ -60,9 +55,9 @@ MULT:
     blt t1, zero, Negativo2 #Si el segundo numero es negativo
 
 Loop:
+    beq t2, t1, DONE_MULT
     add t5, t5, t0
     addi t2, t2, 1
-    beq t2, t1, DONE_MULT
     jal zero, Loop
 
 
@@ -80,10 +75,10 @@ Negativo2:
     xori t1, t1, 0xFFFFFFFF
     addi t4, zero, 1
     addi t6, zero, 1
-    beq t3, t4, 2Negativos
+    beq t3, t4, dos_negativos
     jal zero, Loop
 
-2Negativos:
+dos_negativos:
     addi t6, zero, -1
     addi t3, zero, 0
     addi t4, zero, 0
