@@ -148,6 +148,7 @@ static void fir_cmd(void){
 	//}
 
 	int finalNum[10];
+
 	finalNum[0] = fir(nums[0],0,0,0,0);
 	finalNum[1] = fir(nums[1],nums[0],0,0,0);
 	finalNum[2] = fir(nums[2],nums[1],nums[0],0,0);
@@ -162,13 +163,16 @@ static void fir_cmd(void){
 	printf("Resultado : [%d,%d,%d,%d,%d,%d,%d,%d,%d,%d] \n", finalNum[0],finalNum[1],finalNum[2],finalNum[3],finalNum[4],finalNum[5],finalNum[6],finalNum[7],finalNum[8],finalNum[9]);
 }
 
-extern int add(int a, int b);
+extern int add(int a, int b, int c, int d, int e);
 static void add_cmd(void)
 {
 	int a = 1;
 	int b = 2;
+	int c = 1;
+	int d = 1;
+	int e = 1;
 
-	printf("Adding %d + %d is = %d \r\n", a, b, add(a,b));
+	printf("Adding %d + %d is = %d \r\n", a, b, add(a,b,c,d,e));
 
 }
 
@@ -189,7 +193,7 @@ static void console_service(void)
 	else if(strcmp(token, "reboot") == 0)
 		reboot_cmd();
 	else if(strcmp(token, "helloc") == 0)
-		helloc_cmd();
+		printf("HelloC");
 	else if(strcmp(token, "fir") == 0)
 		fir_cmd();
 	prompt();
