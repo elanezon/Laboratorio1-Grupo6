@@ -76,10 +76,10 @@ Negativo2:
     xori t1, t1, 0xFFFFFFFF
     addi t4, zero, 1
     addi t6, zero, 1
-    beq t3, t4, 2Negativos
+    beq t3, t4, dos_negativos
     jal zero, Loop
 
-2Negativos:
+dos_negativos:
     addi t6, zero, -1
     addi t3, zero, 0
     addi t4, zero, 0
