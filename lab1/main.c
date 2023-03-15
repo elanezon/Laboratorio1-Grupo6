@@ -169,7 +169,7 @@ static void add_cmd(void)
 	int a = 1;
 	int b = 2;
 
-	printf("Adding %s + %d is = %d \r\n", a, b, add(a,b));
+	printf("Adding %d + %d is = %d \r\n", a, b, add(a,b));
 
 }
 
