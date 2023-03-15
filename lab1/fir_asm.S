@@ -56,9 +56,9 @@ MULT:
     blt t1, zero, Negativo2 #Si el segundo numero es negativo
 
 Loop:
+    beq t2, t1, DONE_MULT
     add t5, t5, t0
     addi t2, t2, 1
-    beq t2, t1, DONE_MULT
     jal zero, Loop
 
 
