@@ -106,11 +106,10 @@ static void helloc_cmd(void)
 	helloc();
 }
 
-extern void fir(int a,int b,int c,int d,int e); 
+extern int fir(int a,int b,int c,int d,int e); 
 
 static void fir_cmd(void){
 
-	int num;
 	char *str1;
 	char *token1;
 	printf("Ingrese los valores : \n");
