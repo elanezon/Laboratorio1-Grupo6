@@ -1,41 +1,40 @@
 .global fir_asm
 
 fir_asm:
+	addi s8, zero, -2
+	addi s1, zero, 3          #b2
 
-#addi x6, zero, 1         #b0 y b4
-addi s0, zero, -2         #b1 y b3
-addi s1, zero, 3          #b2
+	addi s2, zero, 0         #FINAL
+	addi s3, zero, 2
 
-addi s2, zero, 0         #FINAL
-addi s3, zero, 2
 
 UNO:
     add s2, s2, a0
 
 DOS:
-    add t0, zero, s0
+    add t0, zero, s8
     add t1, zero, a1
     addi s4, zero, 3
-    j MULT
+    jal zero, MULT
 
 TRES:
     add t0, zero, s1
     add t1, zero, a2
     addi s5, zero, 4
-    j MULT
+    jal zero, MULT
 
 CUATRO:
-    add t0, zero, s0
+    add t0, zero, s8
     add t1, zero, a3
     addi s6, zero, 5
-    j MULT
+    jal zero, MULT
 
 CINCO:       
     add s2, s2, a4
 
 SALIDA:
     mv a0, s2
-    jr ra
+    jalr zero, ra, 0
 
 READY:
     add s2, s2, t5
