@@ -29,7 +29,6 @@ CINCO:
     add a0, a0, a4
 
 SALIDA:
-    #mv a0, s2
     jr ra
 
 READY:
@@ -43,8 +42,10 @@ READY:
 
 
 MULT:
-    add t2, zero, zero #inicializa counter
-    add t5, zero, zero
+    addi t2, zero, 0 #inicializa counter
+    addi t3, zero, 0
+    addi t4, zero, 0
+    addi t5, zero, 0
     addi t6, zero, -1
 
     blt t0, zero, Negativo1 #Si el primer numero es negativo
