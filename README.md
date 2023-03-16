@@ -76,8 +76,8 @@ y agregué acá los resultados obtenidos para estos conjuntos de datos de entrad
 ````
 []
 []
-[]
-[]
+[0,0,0,1,-2,3,-2,1,0,0]
+[0,1,0,2,2,-2,9,-5,6,2]
 ````
 
 <br/><br>
