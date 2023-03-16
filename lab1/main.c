@@ -147,20 +147,34 @@ static void fir_cmd(void){
 	//	printf("%d," , nums[i]);
 	//}
 
+	//int finalNum[10];
+
+	//finalNum[0] = fir(nums[0],0,0,0,0);
+	//finalNum[1] = fir(nums[1],nums[0],0,0,0);
+	//finalNum[2] = fir(nums[2],nums[1],nums[0],0,0);
+	//finalNum[3] = fir(nums[3],nums[2],nums[1],nums[0],0);
+	//finalNum[4] = fir(nums[4],nums[3],nums[2],nums[1],nums[0]);
+	//finalNum[5] = fir(nums[5],nums[4],nums[3],nums[2],nums[1]);
+	//finalNum[6] = fir(nums[6],nums[5],nums[4],nums[3],nums[2]);
+	//finalNum[7] = fir(nums[7],nums[6],nums[5],nums[4],nums[3]);
+	//finalNum[8] = fir(nums[8],nums[7],nums[6],nums[5],nums[4]);
+	//finalNum[9] = fir(nums[9],nums[8],nums[7],nums[6],nums[5]);
+
+	//printf("Resultado : [%d,%d,%d,%d,%d,%d,%d,%d,%d,%d] \n", finalNum[0],finalNum[1],finalNum[2],finalNum[3],finalNum[4],finalNum[5],finalNum[6],finalNum[7],finalNum[8],finalNum[9]);
+
 	int finalNum[10];
 
-	finalNum[0] = fir(nums[0],0,0,0,0);
-	finalNum[1] = fir(nums[1],nums[0],0,0,0);
-	finalNum[2] = fir(nums[2],nums[1],nums[0],0,0);
-	finalNum[3] = fir(nums[3],nums[2],nums[1],nums[0],0);
-	finalNum[4] = fir(nums[4],nums[3],nums[2],nums[1],nums[0]);
-	finalNum[5] = fir(nums[5],nums[4],nums[3],nums[2],nums[1]);
-	finalNum[6] = fir(nums[6],nums[5],nums[4],nums[3],nums[2]);
-	finalNum[7] = fir(nums[7],nums[6],nums[5],nums[4],nums[3]);
-	finalNum[8] = fir(nums[8],nums[7],nums[6],nums[5],nums[4]);
-	finalNum[9] = fir(nums[9],nums[8],nums[7],nums[6],nums[5]);
-
-	printf("Resultado : [%d,%d,%d,%d,%d,%d,%d,%d,%d,%d] \n", finalNum[0],finalNum[1],finalNum[2],finalNum[3],finalNum[4],finalNum[5],finalNum[6],finalNum[7],finalNum[8],finalNum[9]);
+	printf("Resultado : [%d,%d,%d,%d,%d,%d,%d,%d,%d,%d] \n"
+	,fir(nums[0],0,0,0,0)
+	,fir(nums[1],nums[0],0,0,0)
+	,fir(nums[2],nums[1],nums[0],0,0)
+	,fir(nums[3],nums[2],nums[1],nums[0],0)
+	,fir(nums[4],nums[3],nums[2],nums[1],nums[0])
+	,fir(nums[5],nums[4],nums[3],nums[2],nums[1])
+	,fir(nums[6],nums[5],nums[4],nums[3],nums[2])
+	,fir(nums[7],nums[6],nums[5],nums[4],nums[3])
+	,fir(nums[8],nums[7],nums[6],nums[5],nums[4])
+	,fir(nums[9],nums[8],nums[7],nums[6],nums[5]));
 }
 
 extern int add(int a, int b, int c, int d, int e);
