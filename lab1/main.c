@@ -132,7 +132,7 @@ static void fir_cmd(void){
 			j++;
 		}else {
 			nums[k] = atoi(numstring);
-			for(int q=0;q<strlen(numstring);q++){
+			for(int q=0;q<lentoken;q++){
     				numstring[q] = 0;
     			}
 			
