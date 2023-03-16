@@ -74,8 +74,8 @@ Evalúe su implementación del filtro para al menos los siguientes casos:
 y agregué acá los resultados obtenidos para estos conjuntos de datos de entrada.
 
 ````
-[]
-[]
+[0,1,0,0,2,-1,0,1,-2,1]
+[-4,13,-20,19,-5,-8,18,-13,6,-4]
 [0,0,0,1,-2,3,-2,1,0,0]
 [0,1,0,2,2,-2,9,-5,6,2]
 ````
