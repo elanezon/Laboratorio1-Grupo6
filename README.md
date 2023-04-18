@@ -119,9 +119,9 @@ Este laboratorio se evaluará con la siguiente rúbrica
 
 | Rubro | % | C | EP | D | NP |
 |-------|---|---|----|---|----|
-|`fir_asm.S` produce el resultado correcto| 50|   |    |   |    |
-|Integración en `main.c`|30|   |    |   |    |
-|Uso de repositorio |20|   |    |   |    |
+|`fir_asm.S` produce el resultado correcto| 50|   |  X  |   |    |
+|Integración en `main.c`|30| X  |    |   |    |
+|Uso de repositorio |20| X  |    |   |    |
 
 C: Completo,
 EP: En progreso ($\times 0,8$),
